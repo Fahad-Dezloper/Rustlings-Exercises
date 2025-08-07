@@ -1,10 +1,11 @@
 // You can bring module paths into scopes and provide new names for them with
 // the `use` and `as` keywords.
+use std::io::{self, Read};
 
 mod delicious_snacks {
     // TODO: Add the following two `use` statements after fixing them.
-    // use self::fruits::PEAR as ???;
-    // use self::veggies::CUCUMBER as ???;
+    pub use self::fruits::PEAR as FRUIT_PEAR;
+    pub use self::veggies::CUCUMBER as VEGGIE_CUCUMBER;
 
     mod fruits {
         pub const PEAR: &str = "Pear";
@@ -20,7 +21,7 @@ mod delicious_snacks {
 fn main() {
     println!(
         "favorite snacks: {} and {}",
-        delicious_snacks::fruit,
-        delicious_snacks::veggie,
+        delicious_snacks::FRUIT_PEAR,
+        delicious_snacks::VEGGIE_CUCUMBER,
     );
 }
