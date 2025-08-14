@@ -3,7 +3,6 @@ trait Licensed {
     // implementors like the two structs below can share that default behavior
     // without repeating the function.
     // The default license information should be the string "Default license".
-
     fn licensing_info(&self) -> &str {
         "Default license"
     }
